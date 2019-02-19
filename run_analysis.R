@@ -37,6 +37,14 @@ run <- function(){
         # head(training)
         testing <- cbind(testSubject,testX,testY) 
         mergedActivityData <-rbind(training,testing)
-        # head(mergedActivityData)
+        
+        # give column names, so we can extract only needed columns
+        # print(features[,2]) # contains measurement names #observations
+        colnames(mergedActivityData) <- c("subject", "activity",features[, 2])
+        
+        ##Extracts only the measurements on the mean and standard deviation for each measurement.
+        mergedActivityData<-mergedActivityData[ ,grepl("subject|activity|mean|std",
+                                                       colnames(mergedActivityData))]
+        
 }
 run()
