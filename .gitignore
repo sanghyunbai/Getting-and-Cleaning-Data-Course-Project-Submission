@@ -6,4 +6,4 @@ README.Rmd
 .Rproj.user
 
 
-/UCI HAR Dataset
+/dataset/**/UCI HAR Dataset
