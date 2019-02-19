@@ -1,4 +1,7 @@
 README.Rmd
+*.Rmd
+.Rhistory
+
 *.zip
 .Rproj.user
 

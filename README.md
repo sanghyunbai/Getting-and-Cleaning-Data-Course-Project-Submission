@@ -32,7 +32,7 @@ this project is to demonstrate your ability to collect, work with, and clean a d
 
 #### Retrieve Raw Data
 
-1.  Download the raw data from **description of data** can be found in `CodeBook.md` <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+1.  Download the raw data from [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The **description of data** can be found in `CodeBook.md`
 2.  Unzip the downloaded file to `dataset` inside of the directory `Getting-and-Cleaning-Data-Course-Project-Submission` that is created by cloning.
 
 #### Clean data

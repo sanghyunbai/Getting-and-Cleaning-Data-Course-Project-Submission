@@ -65,7 +65,10 @@ run <- function(){
         mergedActivityData <- merge(mergedActivityData, activityLabels,
                                       by="activityId",
                                       all.x=TRUE)
-
+        columnNames <- colnames(mergedActivityData)
+        mergedActivityData$activityId <- mergedActivityData$activityType
+        mergedActivityData <- select(mergedActivityData,-activityType)
+        
         columnNames <- colnames(mergedActivityData)
         columnNames <- gsub("[\\(\\)-]", "", columnNames)
         # replace names in columns
@@ -84,6 +87,7 @@ run <- function(){
         groupBy<-group_by(mergedActivityData,subjectId,activityId)
         mergedActivityDataMean<-summarise_each(groupBy,funs = mean)
 
+        View(mergedActivityDataMean)
         write.table(mergedActivityDataMean, "tidy_data.txt", row.names = FALSE,
                     quote = TRUE)
 }
