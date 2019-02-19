@@ -1,2 +1,6 @@
 README.Rmd
+*.zip
+.Rproj.user
 
+
+/UCI HAR Dataset
